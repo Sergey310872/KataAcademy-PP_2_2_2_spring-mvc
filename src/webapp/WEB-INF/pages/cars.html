@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<h2>Cars</h2>
+<table border="1" style="width:300px">
+    <tr>
+        <td><h4>Brand</h4></td>
+        <td><h4>Model</h4></td>
+        <td><h4>Year</h4></td>
+    </tr>
+    <tr th:each="msg : ${messages}">
+        <td th:text="${msg.brand}">test</td>
+        <td th:text="${msg.model}">test</td>
+        <td th:text="${msg.year}">test</td>
+    </tr>
+</table>
+
+</body>
+</html>
