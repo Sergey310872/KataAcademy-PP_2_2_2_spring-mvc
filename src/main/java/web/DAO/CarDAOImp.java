@@ -1,4 +1,4 @@
-package web.DTO;
+package web.DAO;
 
 import org.springframework.stereotype.Component;
 import web.model.Car;
@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class CarDTO {
+public class CarDAOImp implements CarDAO {
     private List<Car> listCars;
 
-    public CarDTO() {
+    public CarDAOImp() {
         listCars = new ArrayList<>();
         listCars.add(new Car("Ford", "Kuga", "2013"));
         listCars.add(new Car("Audi", "A6", "2020"));
@@ -19,6 +19,7 @@ public class CarDTO {
         listCars.add(new Car("Renault", "Logan", "2017"));
     }
 
+    @Override
     public List<Car> getCars(int count) {
         int n = count;
         n = n < 5 ? n : 5;
